@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CPR and AED Emergency Response</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main application stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Leaflet map stylesheet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    >
+
+    <!-- Leaflet map library -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+
+    <!-- Main application JavaScript -->
+    <script src="/js/app.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>CPR and AED Emergency Response</h1>
@@ -13,17 +35,40 @@
     </header>
 
     <main>
-        <section>
+        <!-- AED location map and device list -->
+        <section id="aed-locator">
             <h2>AED Locator</h2>
-            <p>The AED map will be added in a future development step.</p>
+
+            <p>
+                Explore the map to view verified AED locations
+                when location data is available.
+            </p>
+
+            <div
+                id="aed-map"
+                role="region"
+                aria-label="Map of AED locations"
+            ></div>
+
+            <p id="aed-status" role="status" aria-live="polite">
+                Loading AED information...
+            </p>
+
+            <ul id="aed-list"></ul>
         </section>
 
-        <section>
+        <!-- CPR emergency instructions -->
+        <section id="cpr-instructions">
             <h2>CPR Instructions</h2>
-            <p>Step-by-step emergency guidance will be added here.</p>
+            <p>
+                Step-by-step emergency guidance will be added here.
+            </p>
         </section>
 
-        <p class="emergency-notice">In an emergency, call 911.</p>
+        <!-- Emergency notice -->
+        <p class="emergency-notice">
+            In an emergency, call 911.
+        </p>
     </main>
 </body>
 </html>
