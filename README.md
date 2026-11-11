@@ -60,3 +60,11 @@ Build a web application that helps users locate AED devices and access CPR guida
 - Add tests and improve documentation.
 
 **Safety note:** This prototype is for development and demonstration. It is not a substitute for emergency services or certified CPR training. In an emergency, call 911 and follow the dispatcher's instructions.
+
+   ```bash
+source .venv/bin/activate
+   ```
+
+   ```bash
+python app.py
+   ```
